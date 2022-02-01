@@ -16,7 +16,7 @@ class PindahDenganData : AppCompatActivity() {
 
         val tvDataReceived:TextView = findViewById(R.id.tv_data_received)
         val name = intent.getStringExtra(EXTRA_NAME)
-        val age = intent.getStringExtra(EXTRA_AGE)
+        val age = intent.getIntExtra(EXTRA_AGE,0)
         val text = "hello my name is $name, I'm $age y.o"
         tvDataReceived.text = text
     }
