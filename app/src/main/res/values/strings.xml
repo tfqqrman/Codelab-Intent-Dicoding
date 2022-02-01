@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="pindah_activity">Pindah activity</string>
+    <string name="text_pindah_intent">Ini halaman pindah intent tanpa data</string>
+    <string name="pindah_activity_with_data">pindah activity with data</string>
+    <string name="dial_button">dial button</string>
+    <string name="data_diterima">data diterima</string>
+</resources>
