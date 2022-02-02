@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -16,6 +17,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         val pindahActivityData: Button = findViewById(R.id.btn_move_activity_data)
         pindahActivityData.setOnClickListener(this)
+
+        val pindahImplicit: Button = findViewById(R.id.btn_move_implicit_dial)
+        pindahImplicit.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -29,6 +33,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 pindahIntentData.putExtra(PindahDenganData.EXTRA_NAME,"Januar")
                 pindahIntentData.putExtra(PindahDenganData.EXTRA_AGE,90)
                 startActivity(pindahIntentData)
+            }
+            R.id.btn_move_implicit_dial ->{
+                val phoneNumber = "085330028231"
+                val pindahImplicit = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
+                startActivity(pindahImplicit)
             }
         }
     }
